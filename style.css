@@ -1,0 +1,42 @@
+.form{
+  width: 300px;
+  height: 400px;
+  background: #000;
+  margin: 0 auto;
+  border-radius: 10px;
+  
+}
+p{
+    margin: 0;
+}
+.input1,
+.input2{
+   
+    border-radius: 20px;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    padding: 0 20px; 
+}
+
+.input1::placeholder,
+.input2::placeholder{
+    text-align: center;
+}
+
+p:first-child{
+  padding-top: 100px;
+  margin-bottom: 50px;
+}
+.p{
+    margin-bottom: 100px;
+}
+.btn{
+    display: block;
+    
+    width: 120px;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 30px;
+}

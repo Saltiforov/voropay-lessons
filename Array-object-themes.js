@@ -44,25 +44,25 @@ const getConfig = () => {
       ]
     },
   ];
-}
-const vForm = document.getElementById('form')
-const vInput = document.getElementById('input-search')
+};
+const vForm = document.getElementById('form');
+const vInput = document.getElementById('input-search');
 
 vForm.addEventListener('submit', (e) => {
   e.preventDefault();
   let searchValue = vInput.value; //Cat
-  console.log('Submit array', array)
+  console.log('Submit array', array);
 
-  let newArray = array.filter(element => element.apiCode.includes(searchValue))
-  console.log('Submit newArray', newArray)
-})
+  let newArray = array.filter(element => element.apiCode.includes(searchValue));
+  console.log('Submit newArray', newArray);
+});
 
 const content = {
   name: 'RIAT',
   subtype: 'rio',
   updateTiming: 'dasdasdds',
   type: 'Message',
-}
+};
 
 const array = [
   {
@@ -118,15 +118,15 @@ const array = [
     "Cors": "yes",
     "Link": "https://dukengn.github.io/Dog-facts-API/",
     "Category": "Animals"
-  },]
+  },];
 
 const config = getConfig();
 
 config.forEach(element => {
   if (element.type === content.type){
-    console.log(element.type)
+    console.log(element.type);
   }
-})
+});
 
 //const array = [
 //  {name: 'Voropay', age: 23}, //0
@@ -146,8 +146,50 @@ const personArray = [
   {name: 'Cat', age: 13, spec: 'agro'},
   {name: 'Chepka', age: 120, spec: 'bio'}
 ];
+
+
+
+let nameF = document.querySelector('.input1'),
+    ageF = document.querySelector('.input2'),
+    formF = document.querySelector('.form');
+
+formF.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let nameValue = nameF.value,
+      ageValue = ageF.value;
+
+      let newArrayPerson = personArray.filter(function (element){
+       return element.name.toLowerCase().includes(nameValue);
+       });
+       console.log(newArrayPerson);
+ 
+  
+});
+
+
+
+
+
+
 // name - input field with type text
 // age select/input on ur choice
 // spec select
 
 //Create new form, for adding new person in array
+
+// создать 2 форми,1 форма записовать нови значения в массив,2 форма-поиск по цьому массиву  
+
+
+// if (nameValue != '' && ageValue != '' && ageValue != isNaN){
+//   console.log(nameValue);
+//   console.log(ageValue);
+  
+// }else{
+//   return;
+// }
+
+
+      
+
+
+
