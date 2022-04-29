@@ -152,21 +152,47 @@ const personArray = [
 let nameF = document.querySelector('.input1'),
     ageF = document.querySelector('.input2'),
     formF = document.querySelector('.form');
+    let newArrayPerson = [];
+
 
 formF.addEventListener('submit', (e) => {
   e.preventDefault();
   let nameValue = nameF.value,
       ageValue = ageF.value;
 
-      let newArrayPerson = personArray.filter(function (element){
-       return element.name.toLowerCase().includes(nameValue);
-       });
-       console.log(newArrayPerson);
- 
-  
+    let newObjectPerson = {
+      name: nameValue,
+      age : ageValue,
+    };
+    if (ageValue != '' && nameValue != ''){
+      newArrayPerson.push(newObjectPerson);
+      console.log(`New Guys :`,newArrayPerson);
+    }else{
+      return;
+    }
+
+});
+
+let form2 = document.querySelector('.search'),
+    nameF2 = document.querySelector('.input3'),
+    ageF2 = document.querySelector('.input4');
+
+form2.addEventListener('submit', (e) =>{
+  e.preventDefault();
+  let nameValue2 = nameF2.value;
+  let ageValue2 = ageF2.value;
+  const btn2 = document.querySelector('.btn2');
+
+let newArrPerson2 = newArrayPerson.filter(element => element.name.includes(nameValue2) );
+
+
+  console.log(newArrPerson2);
 });
 
 
+
+
+ 
 
 
 
